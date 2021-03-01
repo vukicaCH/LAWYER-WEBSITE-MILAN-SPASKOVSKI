@@ -1,0 +1,65 @@
+.pocetna-section-onama {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/pozadina-onama.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.o-nama-sekcija {
+    padding: 100px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+
+.o-nama-sekcija-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 30px 0;
+    color: #48484a;
+}
+
+.o-nama-sekcija-slika {
+    background: url('img/slika-onama.jpg') center no-repeat;
+    background-size: cover;
+    border-left: 20px solid #272C3F;
+}
+
+@media screen and (max-width: 1024px) {
+    .o-nama-sekcija {
+        padding: 100px 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .o-nama-sekcija {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+
+    .o-nama-sekcija-slika {
+        height: 500px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .o-nama-sekcija-text p {
+        font-size: 1rem;
+    }
+
+    .o-nama-sekcija-slika {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .o-nama-sekcija {
+        padding: 100px 20px;
+    }
+}

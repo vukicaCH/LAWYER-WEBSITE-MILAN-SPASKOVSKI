@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow: initial;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*header*/
+
+header {
+    background-color: #272C3F;
+    padding: 0 200px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-data {
+    margin: 30px 0;
+    font-size: 1.1rem;
+    padding: 0 10px;
+    border-right: 1px solid rgba(255, 255, 242, 0.3)
+}
+
+.contact-data:last-child {
+    border: none;
+}
+
+.contact-data i {
+    color: #BEB395;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.contact-data span {
+    color: #fffff2;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 242, 0.3);
+    position: relative;
+}
+
+.navigation-list {
+    display: flex;
+    align-items: center;
+    transition: .5s ease;
+}
+
+.navigation-item {
+    margin-right: 40px;
+}
+
+
+.navigation-item.logo {
+    margin-right: 100px;
+}
+
+.navigation-item.close {
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fffff2;
+    cursor: pointer;
+    display: none;
+}
+
+.navigation-item.usluge-item {
+    position: relative;
+}
+
+.navigation-item.usluge-item .navigation-link {
+    pointer-events: none;
+}
+
+.usluge-navigacija-lista {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    background-color: #272C3F;
+    width: 200px;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+.navigation-item.usluge-item:hover .usluge-navigacija-lista {
+    height: 300px;
+}
+
+.usluge-navigacija-lista li:first-child {
+    padding-top: 20px;
+}
+
+.usluge-navigacija-lista li {
+    padding: 0 20px;
+}
+
+.usluge-navigacija-lista li a {
+    font-weight: 300;
+    color: #fffff2;
+}
+
+.usluge-navigacija-lista li a:hover {
+    color: #BEB395;
+    transition: .5s ease;
+}
+
+
+.navigation-link {
+    color: #fffff2;
+    transition: .5s ease;
+}
+
+.navigation-link:hover {
+    color: #BEB395;
+}
+
+.navigation-item.logo .navigation-link {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-size: 2rem;
+    color: #BEB395;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle i {
+    font-size: 2rem;
+    color: #fffff2;
+    cursor: pointer;
+}
+
+/*pocetna*/
+
+.pocetna-section {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/pozadina-pocetna.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.pocetna-text {
+    margin-left: 100px;
+}
+
+.pocetna-text p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #fffff2;
+}
+
+.pocetna-text h1 {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fffff2;
+    margin-top: 30px;
+}
+
+.pocetna-text a {
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #BEB395;
+    color: #fffff2;
+    padding: 10px 30px;
+    transition: .5s ease;
+}
+
+.pocetna-text a:hover {
+    background-color: #cfbd8c;
+}
+
+/*dodatak*/
+
+.dodatak {
+    background-color: #F1F1F1;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dodatak-1 {
+    text-align: center;
+    margin: 0 20px;
+}
+
+
+
+.dodatak-1 p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #C0B596;
+}
+
+.dodatak h1 {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-weight: 300;
+    color: #48484a;
+}
+
+
+/*usluge*/
+
+.usluge-section {
+    padding: 100px 150px;
+    text-align: center;
+    color: rgb(252, 236, 236);
+}
+
+.naslov {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color: #48484a;
+    padding: 0 20px;
+    border-right: 3px solid #C0B596;
+    border-left: 3px solid #C0B596;
+    display: inline-block;
+}
+
+.usluge {
+    margin: 150px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+.usluga {
+    padding: 20px 30px;
+    border-top: 10px solid #272C3F;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, .4);
+    position: relative;
+    bottom: 0;
+    transition: .5s ease;
+}
+
+.usluga:hover {
+    bottom: 30px;
+}
+
+.usluga h2 {
+    color: #48484a;
+}
+
+.usluga hr {
+    margin: 20px 0;
+}
+
+.usluga p {
+    text-align: justify;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #48484a;
+}
+
+.usluga a {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #BEB395;
+    color: #fffff2;
+    padding: 8px 20px;
+    transition: .5s ease;
+}
+
+.usluga a:hover {
+    background-color: #cfbd8c;
+}
+
+/*o nama section */
+
+.o-nama-section {
+    padding: 100px 150px;
+    background-color: #F1F1F1;
+}
+
+.o-nama {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 50px;
+}
+
+.o-nama-slika {
+    background-color: #BEB395;
+}
+
+.o-nama-slika img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: -20px;
+    right: 20px;
+}
+
+.o-nama-text {
+    text-align: center;
+}
+
+.o-nama-text p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: left;
+    margin: 30px 0;
+    color: #48484a;
+}
+
+.o-nama-text a {
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #BEB395;
+    color: #fffff2;
+    padding: 10px 30px;
+    transition: .5s ease;
+}
+
+.o-nama-text a:hover {
+    background-color: #cfbd8c;
+}
+
+/* pozovite nas */
+
+.pozovite-nas-section {
+    background-color: #272C3F;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.pozovite-nas-section span {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fffff2;
+}
+
+.pozovite-nas-section a {
+    font-size: 1.2rem;
+    color: #C0B596;
+}
+
+/* kontakt section */
+
+.kontakt-section {
+    padding: 100px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/kontakt-pozadina.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.kontakt-text h1 {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    color: #fffff2;
+}
+
+.kontakt-text p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #fffff2;
+}
+
+.kontakt-forma form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-forma form input {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid rgba(192, 181, 150, 0.9);
+    color: #fffff2;
+    background-color: rgba(192, 181, 150, 0.6);
+}
+
+.kontakt-forma form input::placeholder {
+    color: #fffff2;
+}
+
+.kontakt-forma form select {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid rgba(192, 181, 150, 0.9);
+    color: #fffff2;
+    background-color: rgba(192, 181, 150, 0.6);
+}
+
+.kontakt-forma form textarea {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid rgba(192, 181, 150, 0.9);
+    color: #fffff2;
+    background-color: rgba(192, 181, 150, 0.6);
+}
+
+.kontakt-forma form textarea::placeholder {
+    color: #fffff2;
+}
+
+.kontakt-forma form input[type='submit'] {
+    display: inline-block;
+    background-color: #BEB395;
+    color: #fffff2;
+    padding: 10px 30px;
+}
+
+/* footer */
+
+footer {
+    background-color: #272C3F;
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.footer-navigacija {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+    margin-bottom: 100px;
+}
+
+.f-nav-deo h1 {
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fffff2;
+    margin-bottom: 20px;
+}
+
+h1.boja-loga {
+    color: #BEB395;
+}
+
+.f-nav-deo p {
+    font-weight: 300;
+    color: #fffff2;
+    margin: 10px 0;
+}
+
+.f-nav-deo .usluge-lista .usluge-stavka,
+.f-nav-deo .brza-lista .brza-stavka {
+    margin: 10px 0;
+}
+
+.f-nav-deo .usluge-lista .usluge-link,
+.f-nav-deo .brza-lista .brz-link {
+    font-weight: 400;
+    color: #fffff2;
+    transition: .5s ease;
+}
+
+.f-nav-deo .usluge-lista .usluge-link:hover,
+.f-nav-deo .brza-lista .brz-link:hover {
+    color: #BEB395;
+}
+
+.footer-info {
+    padding: 20px 0;
+    color: #fffff2;
+    border-top: 1px solid rgba(255, 255, 242, 0.3);
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0 50px;
+    }
+
+    .usluge-section {
+        padding: 150px 50px;
+    }
+
+    .o-nama-section {
+        padding: 150px 50px;
+    }
+
+    .kontakt-section {
+        padding: 150px 50px;
+    }
+
+    .usluga p {
+        text-align: left;
+    }
+
+    footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0;
+    }
+
+    .contact-data span {
+        font-size: 0.9rem;
+    }
+
+
+    .navigation-list {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #272C3F;
+        padding-top: 50px;
+        z-index: 100;
+    }
+
+
+    .navigation-item.logo {
+        display: none;
+    }
+
+    .navigation-item {
+        margin: 30px 0;
+    }
+
+    .navigation-item.close {
+        display: initial;
+        margin: 0;
+    }
+
+    .navigation-link {
+        font-size: 1rem;
+    }
+
+    .usluge-navigacija-lista {
+        left: -100%;
+    }
+
+    .toggle {
+        display: initial;
+    }
+
+    .usluge {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .o-nama {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .o-nama-slika {
+        width: 400px;
+        margin: auto;
+    }
+
+    .pozovite-nas-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kontakt-section {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+
+    .kontakt-forma form {
+        width: 80%;
+    }
+
+    .footer-navigacija {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 50px;
+    }
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .contact-info {
+        margin: 0 20px;
+    }
+
+    .contact-data {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-data i {
+        margin-bottom: 10px;
+    }
+
+    .pocetna-text {
+        margin-left: 20px;
+        padding-right: 100px;
+    }
+
+    .usluge {
+        grid-template-columns: 1fr;
+    }
+
+    .pozovite-nas-section {
+        padding: 20px 50px;
+    }
+
+    footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-navigacija {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .footer-info {
+        padding: 20px;
+    }
+}
+
+.open {
+    left: 0;
+}
+
+@media screen and (max-width: 400px) {
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .contact-data {
+        border: none;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .contact-data i {
+        display: none;
+    }
+
+
+    .pocetna-text {
+        padding-right: 20px;
+    }
+
+    .pocetna-text h1 {
+        font-size: 2rem;
+    }
+
+    .dodatak {
+        flex-direction: column;
+    }
+
+    .usluge-section {
+        padding: 100px 20px;
+    }
+
+    .o-nama-section {
+        padding: 100px 20px;
+    }
+
+    .o-nama-slika {
+        width: 200px;
+    }
+
+    .kontakt-section {
+        padding: 100px 20px;
+        column-gap: 0;
+    }
+
+    .kontakt-text h1 {
+        font-size: 2rem;
+    }
+
+    .kontakt-text p {
+        font-size: 1rem;
+        padding-right: 20px;
+    }
+
+    .kontakt-forma form input {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .kontakt-forma form select {
+        padding: 10px;
+    }
+
+    .kontakt-forma form textarea {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .kontakt-forma form textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .naslov {
+        font-size: 2rem;
+    }
+}

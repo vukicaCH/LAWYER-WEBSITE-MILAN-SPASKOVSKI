@@ -1,0 +1,130 @@
+.pocetna-section-usluge {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/pozadina-usluge.jpg') center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.jedna-usluga-section {
+    padding: 100px 150px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+}
+
+.jedna-usluga-opis p {
+    margin: 20px 0;
+    color: #48484a;
+    font-weight: 300;
+}
+
+.usluga-navigacija {
+    position: relative;
+    background-color: #F1F1F1;
+}
+
+.usluga-navigacija::before {
+    content: 'USLUGE';
+    font-size: 1.5rem;
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: calc(100% - 10px);
+    height: 50px;
+    padding-left: 10px;
+    background-color: #272C3F;
+    color: #C0B596;
+    display: flex;
+    align-items: center;
+}
+
+.usluga-navigacija-item {
+    font-size: 1.3rem;
+    font-family: 'IM Fell French Canon SC', sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    background-color: #F1F1F1;
+    border-top: 2px solid #272C3F;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    transition: .5s ease;
+}
+
+
+.usluga-navigacija-link {
+    color: #48484a;
+}
+
+.usluga-navigacija-item:hover {
+    right: 20px;
+}
+
+.kontakt-link {
+    margin-top: 50px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(39, 44, 63, 0.8), rgba(39, 44, 63, 0.8)), url('img/konsultacija.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.kontakt-link a {
+    display: inline-block;
+    background-color: #BEB395;
+    color: #fffff2;
+    padding: 8px 20px;
+    transition: .5s ease;
+}
+
+.kontakt-link a:hover {
+    background-color: #cfbd8c;
+}
+
+@media screen and (max-width: 1024px) {
+    .jedna-usluga-section {
+        grid-template-columns: 1fr;
+    }
+
+    .jedna-usluga-kontakt-navigacija {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+    }
+
+    .kontakt-link {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .jedna-usluga-opis h1 {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .jedna-usluga-kontakt-navigacija {
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .jedna-usluga-section {
+        padding: 100px 20px;
+    }
+
+    .jedna-usluga-opis p {
+        font-size: 0.9rem;
+    }
+
+    .usluga-navigacija-item:hover {
+        right: 0;
+        bottom: 20px;
+    }
+}
